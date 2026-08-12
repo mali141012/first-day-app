@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -40,7 +39,6 @@ import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TimePicker
-import androidx.compose.material3.TimePickerDefaults
 import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -182,7 +180,7 @@ private fun NameSection(state: CreateUiState, onNameChange: (String) -> Unit) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 private fun EmojiSection(selected: String, onPick: (String) -> Unit) {
     Column {
@@ -211,7 +209,7 @@ private fun EmojiSection(selected: String, onPick: (String) -> Unit) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 private fun ColorSection(selected: String, onPick: (String) -> Unit) {
     Column {
@@ -283,7 +281,7 @@ private fun FrequencySection(state: CreateUiState, viewModel: CreateViewModel) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 private fun WeekdayPicker(state: CreateUiState, viewModel: CreateViewModel) {
     val dayLabels = listOf("S", "M", "T", "W", "T", "F", "S")
