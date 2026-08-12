@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">First Day</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_today">Today</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home / Today -->
+    <string name="today_title">Today</string>
+    <string name="today_empty_title">A fresh start lives here</string>
+    <string name="today_empty_body">You haven\'t added any habits yet. The first day of anything is the hardest — let\'s make it a small one.</string>
+    <string name="today_add">Add a habit</string>
+    <string name="today_completed_all">Everything\'s done for today. Nice.</string>
+    <string name="today_progress">%1$d of %2$d done</string>
+    <string name="habit_scheduled">Scheduled %1$s</string>
+    <string name="habit_times_week">%1$d× / week</string>
+    <string name="habit_daily">Every day</string>
+    <string name="habit_weekdays">Weekdays</string>
+    <string name="habit_weekends">Weekends</string>
+    <string name="habit_custom_days">Custom days</string>
+    <string name="streak_days">%1$d days</string>
+    <string name="streak_day">%1$d day</string>
+
+    <!-- Habit create / edit -->
+    <string name="create_title_new">New habit</string>
+    <string name="create_title_edit">Edit habit</string>
+    <string name="create_name_label">What do you want to build?</string>
+    <string name="create_name_placeholder">Read for 20 minutes</string>
+    <string name="create_icon_label">Pick an icon</string>
+    <string name="create_color_label">Choose a color</string>
+    <string name="create_frequency_label">How often?</string>
+    <string name="create_reminder_label">Reminder</string>
+    <string name="create_reminder_off">No reminder</string>
+    <string name="create_reminder_on">Remind me at %1$s</string>
+    <string name="create_save">Save habit</string>
+    <string name="create_delete">Delete habit</string>
+    <string name="create_archive">Archive</string>
+    <string name="create_unarchive">Unarchive</string>
+    <string name="freq_daily">Every day</string>
+    <string name="freq_weekdays">Certain days</string>
+    <string name="freq_x_week">X times a week</string>
+
+    <!-- Detail -->
+    <string name="detail_current_streak">Current streak</string>
+    <string name="detail_longest_streak">Longest streak</string>
+    <string name="detail_completion_rate">Completion rate</string>
+    <string name="detail_7_days">7 days</string>
+    <string name="detail_30_days">30 days</string>
+    <string name="detail_90_days">90 days</string>
+    <string name="detail_heatmap_year">This year</string>
+    <string name="detail_today">Today</string>
+    <string name="detail_no_completions">No completions yet. Tap the circle to start your streak.</string>
+
+    <!-- Stats -->
+    <string name="stats_title">Stats</string>
+    <string name="stats_weekly">This week</string>
+    <string name="stats_monthly">Last 30 days</string>
+    <string name="stats_completed">Completed</string>
+    <string name="stats_missed">Missed</string>
+    <string name="stats_empty_title">Nothing to measure yet</string>
+    <string name="stats_empty_body">Once you\'ve tracked a few days, your weekly and monthly progress will show up here.</string>
+    <string name="stats_total_completions">Total completions</string>
+    <string name="stats_best_streak">Best streak</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_dark_mode">Dark mode</string>
+    <string name="settings_dark_mode_system">Follow system</string>
+    <string name="settings_dark_mode_on">On</string>
+    <string name="settings_dark_mode_off">Off</string>
+    <string name="settings_start_of_week">Start of week</string>
+    <string name="settings_start_sunday">Sunday</string>
+    <string name="settings_start_monday">Monday</string>
+    <string name="settings_data">Your data</string>
+    <string name="settings_export">Export to file</string>
+    <string name="settings_export_desc">Save a JSON backup of all your habits and history.</string>
+    <string name="settings_import">Import from file</string>
+    <string name="settings_import_desc">Restore from a JSON backup. This replaces your current data.</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_desc">First Day is a private, offline habit tracker. No accounts, no cloud, no tracking — your data never leaves your device.</string>
+    <string name="settings_version">Version %1$s</string>
+
+    <!-- Dialogs / confirmation -->
+    <string name="confirm_delete_title">Delete this habit?</string>
+    <string name="confirm_delete_body">This removes the habit and all its history permanently. There\'s no undo.</string>
+    <string name="confirm_archive_title">Archive this habit?</string>
+    <string name="confirm_archive_body">It\'ll move out of your Today list, but your full history stays safe.</string>
+    <string name="confirm_import_title">Replace your data?</string>
+    <string name="confirm_import_body">Importing will erase everything you have now and replace it with the backup file. You can\'t undo this.</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_archive">Archive</string>
+    <string name="action_import">Import</string>
+    <string name="action_done">Done</string>
+
+    <!-- Snackbars -->
+    <string name="snack_habit_saved">Habit saved</string>
+    <string name="snack_habit_deleted">Habit deleted</string>
+    <string name="snack_habit_archived">Habit archived</string>
+    <string name="snack_habit_unarchived">Habit restored</string>
+    <string name="snack_export_success">Backup saved</string>
+    <string name="snack_export_failed">Couldn\'t save the backup</string>
+    <string name="snack_import_success">Backup restored</string>
+    <string name="snack_import_failed">Couldn\'t read that file</string>
+
+    <!-- Reminders -->
+    <string name="reminder_channel_name">Habit reminders</string>
+    <string name="reminder_channel_desc">Local notifications to nudge you toward your habits.</string>
+    <string name="reminder_title">Time for %1$s</string>
+    <string name="reminder_body">A few minutes now keeps your streak alive.</string>
+</resources>
