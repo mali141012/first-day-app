@@ -2,8 +2,6 @@ package com.firstday.habits.data.repository
 
 import com.firstday.habits.data.dao.CompletionDao
 import com.firstday.habits.data.dao.HabitDao
-import com.firstday.habits.data.entity.toBackup
-import com.firstday.habits.data.entity.toEntity
 import kotlinx.serialization.json.Json
 import java.time.LocalDate
 
