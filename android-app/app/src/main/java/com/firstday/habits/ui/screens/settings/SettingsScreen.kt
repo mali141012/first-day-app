@@ -3,6 +3,7 @@ package com.firstday.habits.ui.screens.settings
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,6 +13,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -21,15 +24,12 @@ import androidx.compose.material.icons.rounded.CloudUpload
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.RadioButton
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
@@ -53,6 +53,7 @@ import com.firstday.habits.R
 import com.firstday.habits.data.prefs.DarkModePref
 import com.firstday.habits.ui.theme.ForestGreen
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel,
@@ -63,6 +64,9 @@ fun SettingsScreen(
     var showImportConfirm by remember { mutableStateOf(false) }
     var pendingImportUri by remember { mutableStateOf<Uri?>(null) }
     val snackbarHostState = remember { SnackbarHostState() }
+    
+    // تم نقل Context هنا خارج LaunchedEffect لمنع الخطأ
+    val context = LocalContext.current
 
     val createDocLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.CreateDocument("application/json"),
@@ -80,13 +84,12 @@ fun SettingsScreen(
     }
 
     LaunchedEffect(Unit) {
-        val ctx = LocalContext.current
         viewModel.events.collect { event ->
             val msg = when (event) {
-                SettingsEvent.EXPORT_SUCCESS -> ctx.getString(R.string.snack_export_success)
-                SettingsEvent.EXPORT_FAILED -> ctx.getString(R.string.snack_export_failed)
-                SettingsEvent.IMPORT_SUCCESS -> ctx.getString(R.string.snack_import_success)
-                SettingsEvent.IMPORT_FAILED -> ctx.getString(R.string.snack_import_failed)
+                SettingsEvent.EXPORT_SUCCESS -> context.getString(R.string.snack_export_success)
+                SettingsEvent.EXPORT_FAILED -> context.getString(R.string.snack_export_failed)
+                SettingsEvent.IMPORT_SUCCESS -> context.getString(R.string.snack_import_success)
+                SettingsEvent.IMPORT_FAILED -> context.getString(R.string.snack_import_failed)
             }
             snackbarHostState.showSnackbar(msg)
         }
@@ -287,5 +290,3 @@ private fun DataRow(
         }
     }
 }
-
-
